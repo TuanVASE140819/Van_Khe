@@ -1,0 +1,65 @@
+/*
+ * Design tokens bản 2 (xem design/PB-7-phan-hoi-khach.md).
+ * Họ màu "Rừng": xanh rừng đậm là điểm nhấn duy nhất, nền trắng ngà lạnh, chữ đen xanh.
+ * Hình khối: vuông sắc (0px) cho ảnh, nút, ô nhập; đường kẻ mảnh thay cho bóng.
+ */
+:root {
+  --bg: #f3f4f1;
+  --surface: #ffffff;
+  --surface-2: #e8ebe6;
+  --ink: #16211c;
+  --ink-2: #4d5a53;
+  --line: #d3d9d3;
+  --accent: #1f4d3a;
+  --accent-hover: #173b2c;
+  --on-accent: #f3f4f1;
+  /* khối màu duy nhất của trang (phần đăng ký tư vấn) */
+  --block: #1f4d3a;
+  --on-block: #eef2ee;
+  --on-block-2: #b9c9bf;
+  --danger: #a8281e;
+  --danger-on-block: #ffb4a8;
+  --scrim: rgb(10 16 13 / 55%);
+
+  --font: 'Be Vietnam Pro', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-display: 'Noto Serif Display', 'Times New Roman', serif;
+  --text-hero: clamp(3rem, 1.6rem + 6vw, 6.5rem);
+  --text-display: clamp(2.4rem, 1.5rem + 3.4vw, 4.25rem);
+  --text-h2: clamp(2rem, 1.4rem + 2.2vw, 3.1rem);
+  --text-h3: clamp(1.45rem, 1.2rem + 0.8vw, 1.85rem);
+
+  --radius: 0;
+  --page: 1280px;
+  --gutter: 20px;
+  --section: clamp(72px, 10vw, 144px);
+  --nav-h: 72px;
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+  color-scheme: light;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --gutter: 40px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0f1512;
+    --surface: #151d19;
+    --surface-2: #1c2621;
+    --ink: #e8ece9;
+    --ink-2: #a6b3ac;
+    --line: #27322c;
+    --accent: #8fc4a5;
+    --accent-hover: #a9d4b9;
+    --on-accent: #0f1512;
+    --block: #173b2c;
+    --on-block: #e8ece9;
+    --on-block-2: #a9bfb2;
+    --danger: #ff8a7d;
+    --danger-on-block: #ffb4a8;
+    --scrim: rgb(0 0 0 / 62%);
+    color-scheme: dark;
+  }
+}

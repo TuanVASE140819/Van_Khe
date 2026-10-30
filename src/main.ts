@@ -1,0 +1,15 @@
+import '@fontsource/be-vietnam-pro/300.css'
+import '@fontsource/be-vietnam-pro/400.css'
+import '@fontsource/be-vietnam-pro/500.css'
+import '@fontsource/be-vietnam-pro/600.css'
+import '@fontsource/noto-serif-display/500.css'
+import '@fontsource/noto-serif-display/600.css'
+import './styles/tokens.css'
+import './styles/base.css'
+import { createApp } from 'vue'
+import App from './App.vue'
+import { vReveal } from './lib/reveal'
+import { vCount, vParallax } from './lib/scrollfx'
+import { router } from './router'
+
+createApp(App).use(router).directive('reveal', vReveal).directive('parallax', vParallax).directive('count', vCount).mount('#app')

@@ -1,0 +1,33 @@
+{
+  "name": "van-khe-land",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Website giới thiệu dự án bất động sản (dữ liệu mẫu): trang chủ, danh sách có bộ lọc, chi tiết, đăng ký tư vấn",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "npm run type-check && vite build && vite build --ssr src/lib/seo-pages.ts --outDir .seo-build && node scripts/prerender.mjs && node scripts/sitemap.mjs",
+    "preview": "vite preview",
+    "type-check": "vue-tsc --noEmit -p tsconfig.app.json && tsc --noEmit -p tsconfig.node.json",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@fontsource/be-vietnam-pro": "^5.1.0",
+    "@fontsource/noto-serif-display": "^5.3.0",
+    "@phosphor-icons/vue": "^2.2.0",
+    "vue": "^3.5.0",
+    "vue-router": "^4.5.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.17.0",
+    "@vitejs/plugin-vue": "^5.2.0",
+    "@vue/tsconfig": "^0.7.0",
+    "typescript": "~5.7.0",
+    "vite": "^6.0.0",
+    "vitest": "^3.0.0",
+    "vue-tsc": "^2.2.0"
+  }
+}
